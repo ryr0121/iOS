@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Week2Practice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="8월 1일 월요일" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uDx-Zl-JeX">
+                                <rect key="frame" x="20" y="27" width="118" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <color key="textColor" systemColor="systemGrayColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="투데이" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ST9-ln-iax">
+                                <rect key="frame" x="20" y="71" width="104" height="48"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ows-fD-f7D">
+                                <rect key="frame" x="284" y="70" width="69" height="50"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="person.circle" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="30"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="profileBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NcC-Ko-v3x"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3ri-jX-uhe">
+                                <rect key="frame" x="20" y="247" width="350" height="350"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KNI-1H-0vn">
+                                        <rect key="frame" x="55" y="111" width="240" height="128"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="KNI-1H-0vn" secondAttribute="bottom" constant="111" id="4Z3-kO-oKP"/>
+                                    <constraint firstAttribute="width" secondItem="3ri-jX-uhe" secondAttribute="height" multiplier="1:1" id="5b8-u1-liB"/>
+                                    <constraint firstItem="KNI-1H-0vn" firstAttribute="top" secondItem="3ri-jX-uhe" secondAttribute="top" constant="111" id="cXz-So-yha"/>
+                                    <constraint firstItem="KNI-1H-0vn" firstAttribute="leading" secondItem="3ri-jX-uhe" secondAttribute="leading" constant="55" id="gId-vO-dCW"/>
+                                    <constraint firstAttribute="trailing" secondItem="KNI-1H-0vn" secondAttribute="trailing" constant="55" id="q3j-7X-tdq"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3ri-jX-uhe" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="64C-kd-xrU"/>
+                            <constraint firstItem="3ri-jX-uhe" firstAttribute="top" secondItem="ST9-ln-iax" secondAttribute="bottom" constant="17" id="89n-SR-zda"/>
+                            <constraint firstItem="uDx-Zl-JeX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="27" id="9ck-g4-wUY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3ri-jX-uhe" secondAttribute="trailing" constant="20" id="OS4-kz-BOp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ows-fD-f7D" secondAttribute="trailing" constant="37" id="Qia-4O-5yK"/>
+                            <constraint firstItem="uDx-Zl-JeX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="WEn-c2-fTc"/>
+                            <constraint firstItem="3ri-jX-uhe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WFb-yP-rD0"/>
+                            <constraint firstItem="ST9-ln-iax" firstAttribute="leading" secondItem="uDx-Zl-JeX" secondAttribute="leading" id="YLg-NG-rRI"/>
+                            <constraint firstItem="ST9-ln-iax" firstAttribute="top" secondItem="uDx-Zl-JeX" secondAttribute="bottom" constant="20" id="Zxi-yW-Fhl"/>
+                            <constraint firstItem="3ri-jX-uhe" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="sl7-5f-5Js"/>
+                            <constraint firstItem="3ri-jX-uhe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="zVJ-kH-neZ"/>
+                            <constraint firstItem="ows-fD-f7D" firstAttribute="centerY" secondItem="ST9-ln-iax" secondAttribute="centerY" id="zvl-9i-OdG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tadayLabel" destination="ST9-ln-iax" id="Q3q-SY-BOL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="101.53846153846153" y="3.5545023696682461"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="person.circle" catalog="system" width="128" height="123"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
