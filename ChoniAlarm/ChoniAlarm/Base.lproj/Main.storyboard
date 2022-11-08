@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ChoniAlarm" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choni Alarm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H73-ct-rjb">
+                                <rect key="frame" x="123" y="77" width="144" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o36-io-jS2">
+                                <rect key="frame" x="150" y="127" width="88" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="알람 추가"/>
+                                <connections>
+                                    <action selector="addAlarmBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fUW-dR-hkT"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Nfa-Rd-aja">
+                                <rect key="frame" x="15" y="197" width="360" height="513"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AlarmTableViewCell" rowHeight="44" id="vCa-Nn-ogp" customClass="AlarmTableViewCell" customModule="ChoniAlarm" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="360" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vCa-Nn-ogp" id="5DY-an-esX" customClass="AlarmTableViewCell" customModule="ChoniAlarm" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="360" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="content" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ehv-MN-FRO">
+                                                    <rect key="frame" x="35" y="11" width="250" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="prq-bR-v2E">
+                                                    <rect key="frame" x="293" y="6" width="49" height="31"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </switch>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="alarmSwitch" destination="prq-bR-v2E" id="AXu-LZ-b3N"/>
+                                            <outlet property="contentLabel" destination="Ehv-MN-FRO" id="UQH-By-oyK"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="H73-ct-rjb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-330" id="1C4-y7-Wxz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Nfa-Rd-aja" secondAttribute="trailing" constant="15" id="BgW-go-uSg"/>
+                            <constraint firstItem="o36-io-jS2" firstAttribute="top" secondItem="H73-ct-rjb" secondAttribute="bottom" constant="20" id="IBn-RG-m7N"/>
+                            <constraint firstItem="Nfa-Rd-aja" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="Nrp-5C-FpF"/>
+                            <constraint firstItem="Nfa-Rd-aja" firstAttribute="top" secondItem="o36-io-jS2" secondAttribute="bottom" constant="35" id="RFN-QR-UVy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Nfa-Rd-aja" secondAttribute="bottom" constant="100" id="Rh6-41-GNl"/>
+                            <constraint firstItem="H73-ct-rjb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Rij-Ke-c2e"/>
+                            <constraint firstItem="o36-io-jS2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="150" id="xmh-xN-i5R"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="alarmTableView" destination="Nfa-Rd-aja" id="1pr-T6-5ol"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="135.38461538461539" y="3.5545023696682461"/>
+        </scene>
+        <!--Add Alarm View Controller-->
+        <scene sceneID="fWK-az-nlo">
+            <objects>
+                <viewController storyboardIdentifier="AddAlarmViewController" id="JdW-gP-1m6" customClass="AddAlarmViewController" customModule="ChoniAlarm" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fvT-ox-pkh">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Gw-aq-TIN">
+                                <rect key="frame" x="311" y="67" width="54" height="35.666666666666657"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="저장"/>
+                                <connections>
+                                    <action selector="saveBtn:" destination="JdW-gP-1m6" eventType="touchUpInside" id="ZHy-xb-BT8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pcI-y6-3kx">
+                                <rect key="frame" x="25" y="67" width="54" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="취소"/>
+                                <connections>
+                                    <action selector="cancelBtnDidTap:" destination="JdW-gP-1m6" eventType="touchUpInside" id="bUb-nD-JGN"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nIe-Nr-9WL">
+                                <rect key="frame" x="45" y="549.66666666666663" width="300" height="45"/>
+                                <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="NLK-K8-J5h"/>
+                                    <constraint firstAttribute="height" constant="45" id="ufH-yb-jVS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="무슨 내용의 알람인가요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AJe-RM-G4j">
+                                <rect key="frame" x="113" y="503.66666666666674" width="164" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="UC0-x6-r0l">
+                                <rect key="frame" x="35" y="214" width="320" height="216"/>
+                                <locale key="locale" localeIdentifier="ko"/>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="언제 알람을 울릴까요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MSZ-3l-Jay">
+                                <rect key="frame" x="120" y="147" width="150" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="MhR-xd-p9f"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nIe-Nr-9WL" firstAttribute="centerY" secondItem="fvT-ox-pkh" secondAttribute="centerY" constant="150" id="938-MO-0Zp"/>
+                            <constraint firstItem="pcI-y6-3kx" firstAttribute="baseline" secondItem="5Gw-aq-TIN" secondAttribute="baseline" id="A8m-Lu-tWr"/>
+                            <constraint firstItem="MSZ-3l-Jay" firstAttribute="centerX" secondItem="fvT-ox-pkh" secondAttribute="centerX" id="AH6-SV-L8G"/>
+                            <constraint firstItem="UC0-x6-r0l" firstAttribute="centerX" secondItem="fvT-ox-pkh" secondAttribute="centerX" id="LrS-1P-Nnc"/>
+                            <constraint firstItem="AJe-RM-G4j" firstAttribute="centerX" secondItem="fvT-ox-pkh" secondAttribute="centerX" id="Sf1-cb-gHz"/>
+                            <constraint firstItem="UC0-x6-r0l" firstAttribute="centerY" secondItem="fvT-ox-pkh" secondAttribute="centerY" constant="-100" id="U1z-Pd-hUr"/>
+                            <constraint firstItem="MSZ-3l-Jay" firstAttribute="top" secondItem="MhR-xd-p9f" secondAttribute="top" constant="100" id="WJq-Fi-Ci3"/>
+                            <constraint firstItem="MhR-xd-p9f" firstAttribute="trailing" secondItem="5Gw-aq-TIN" secondAttribute="trailing" constant="25" id="XJc-MJ-diP"/>
+                            <constraint firstItem="5Gw-aq-TIN" firstAttribute="top" secondItem="MhR-xd-p9f" secondAttribute="top" constant="20" id="ZkJ-ID-HFc"/>
+                            <constraint firstItem="nIe-Nr-9WL" firstAttribute="centerX" secondItem="fvT-ox-pkh" secondAttribute="centerX" id="fTy-OS-gu6"/>
+                            <constraint firstItem="pcI-y6-3kx" firstAttribute="leading" secondItem="MhR-xd-p9f" secondAttribute="leading" constant="25" id="hq8-rR-LOg"/>
+                            <constraint firstItem="nIe-Nr-9WL" firstAttribute="top" secondItem="AJe-RM-G4j" secondAttribute="bottom" constant="25" id="ryf-DN-0aY"/>
+                            <constraint firstItem="pcI-y6-3kx" firstAttribute="top" secondItem="MhR-xd-p9f" secondAttribute="top" constant="20" id="sAo-vF-LV3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="contentTextField" destination="nIe-Nr-9WL" id="fgo-L0-Kmb"/>
+                        <outlet property="timePickerView" destination="UC0-x6-r0l" id="EuI-Mb-1Kn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pfz-ak-Q7q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="904.61538461538453" y="3.5545023696682461"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiarySystemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
